@@ -10,6 +10,7 @@
 # Ignore environment file.
 /.env
 !/.env*.erb
+.env.*.local
 
 # Ignore all logfiles and tempfiles.
 /log/*

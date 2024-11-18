@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "94f0cef1-547c-4a0b-a5d8-e5d13b662c71",
+		"name": "Riot test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"foo\": \"foobar\", \"bar\": { \"isBar\": true } }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/sign",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"foo\": \"foobar\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/decrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"foo\": \"Zm9vYmFy\", \"bar\": \"ezppc0Jhcj0+dHJ1ZX0=\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/decrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"signature\": \"K\\u0015'k{n?>9\\u0005\\u0010i\\u0017\\\\E5\\u0013^`\", \"data\": {\"foo\": \"foobar\"} }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/verify",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"verify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
